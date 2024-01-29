@@ -1,53 +1,31 @@
 from django.forms import model_to_dict
 from django.shortcuts import render
 from rest_framework import generics, viewsets
+from rest_framework.authentication import TokenAuthentication
 from rest_framework.decorators import action
+from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAdminUser, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from .models import Women, Category
+from .permissions import IsAdminOrReadOnly, IsOwnerOrReadOnly
 from .serializers import WomenSerializer
 
 
-class WomenViewSet(viewsets.ModelViewSet):
-    # queryset = Women.objects.all() так как здесь убран кверисет, то в url добавляем basename
-    serializer_class = WomenSerializer
-
-    def get_queryset(self):
-        pk = self.kwargs.get('pk')
-
-        # вывод части записей
-        if not pk:
-            return Women.objects.all()[:3]
-
-        # вывод конкретной записи через url
-        return Women.objects.filter(pk=pk)
-
-    """    # вывод всех категорий
-        @action(methods=['GET'], detail=False)
-        def category(self, request):
-            cats = Category.objects.all()
-            return Response({'cats': [c.name for c in cats]})
-    """
-    # вывод конкретной категории
-    @action(methods=['GET'], detail=True)
-    def category(self, request, pk=None):
-        cats = Category.objects.get(pk=pk)
-        return Response({'cats': cats.name})
-
-
-'''class WomenAPIList(generics.ListCreateAPIView):
+class WomenAPIList(generics.ListCreateAPIView):
     queryset = Women.objects.all()
     serializer_class = WomenSerializer
+    permission_classes = (IsAuthenticatedOrReadOnly,)  # Ограничение доступа
 
 
-class WomenAPIUpdate(generics.UpdateAPIView):
+class WomenAPIUpdate(generics.RetrieveUpdateAPIView):
     queryset = Women.objects.all()
     serializer_class = WomenSerializer
+    permission_classes = (IsAuthenticated,)  # Ограничение доступа обновления
+    # authentication_classes = (TokenAuthentication,)  # Доступ только тем пользователям, кто залогинился по токену
 
 
-class WomenAPIDetailView(generics.RetrieveUpdateDestroyAPIView):
+class WomenAPIDestroy(generics.RetrieveDestroyAPIView):
     queryset = Women.objects.all()
     serializer_class = WomenSerializer
-
-'''
+    permission_classes = (IsAdminOrReadOnly,)  # Ограничение доступа удаления

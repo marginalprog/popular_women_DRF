@@ -6,16 +6,14 @@ from rest_framework.renderers import JSONRenderer
 
 from .models import Women
 
-"""class WomenModel:
-    def __init__(self, title, content):
-        self.title = title
-        self.content = content"""
-
 
 class WomenSerializer(serializers.ModelSerializer):
+    # Скрыть поле "Пользователь", чтобы при добавлении записи она сразу вязалась с юзером
+    user = serializers.HiddenField(default=serializers.CurrentUserDefault())
+
     class Meta:
         model = Women
-        fields = ("title", "content", "cat")
+        fields = "__all__"
 
 
 """
