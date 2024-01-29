@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7fc5778-d82b-40ee-876c-c98965a31d9c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/women/permissions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/popular_women/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/popular_women/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/popular_women/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/popular_women/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/women/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/women/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/women/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/women/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/women/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/women/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +26,15 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="459ef0fe67a4ba60d1027800e1077c8a5ae558e0" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
