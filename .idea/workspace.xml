@@ -7,6 +7,10 @@
     <list default="true" id="c7fc5778-d82b-40ee-876c-c98965a31d9c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/popular_women/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/popular_women/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/popular_women/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/popular_women/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/women/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/women/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +100,7 @@
       <workItem from="1706433469467" duration="5822000" />
       <workItem from="1706472826961" duration="1432000" />
       <workItem from="1706544921829" duration="4843000" />
+      <workItem from="1706626502387" duration="4806000" />
     </task>
     <servers />
   </component>
